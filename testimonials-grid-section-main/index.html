@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Testimonials grid section</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;500&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+    body {
+      margin:0;;
+      padding:0;
+      background-color: #ECF2F8;
+      font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+
+    .container {
+      display:grid;
+      gap:30px;
+      margin:8% auto;
+      grid-template-areas: 
+      'daniel daniel jonathan kira'
+      'jeanette patrick patrick kira';
+      justify-items:center;
+      max-height:800px;     
+      max-width: 1200px;
+    }
+
+    .grid-Daniel {
+      
+      height: 100%;
+      width:100%;
+      background-color: #7541C8;
+      border-radius: 10px;
+      grid-area: daniel;
+      color:white;
+    }
+
+    .grid-Jonathan {
+      height: 100%;
+      width:100%;
+      background-color: #48556A;
+      border-radius: 10px;
+      grid-area: jonathan;
+      color:white;
+    }
+
+    .grid-Kira {
+      height: 100%;
+      width:100%;
+      background-color:#fff;
+      border-radius: 10px;
+      grid-area: kira;
+      box-shadow: 10px 10px 50px #CFCFCF;
+    }
+
+    .grid-Jeanette {
+      width:100%;
+      height:100%;
+      background-color: #fff;
+      border-radius: 10px;
+      grid-area: jeanette;
+      box-shadow: 10px 10px 50px #CFCFCF;
+    }
+
+    .grid-Patrick {
+      width:100%;
+      height:100%;
+      background-color: #19212E;
+      border-radius: 10px;
+      grid-area: patrick;
+      color:white;
+    }
+
+    .images {
+      border: 2px solid rgba(255, 255, 255, .5);
+      border-radius: 50%;
+      top: 15px;
+      left: 15px;
+
+    }
+    .grid-Patrick .images {
+      border: 2px solid rgba(117, 65, 200, .5);
+    }
+ 
+    .quotation {
+      position: absolute;
+      top:0;
+      right:15%;
+    }
+
+    .grid-box {
+      padding:20px;
+      position: relative;
+    }
+
+    .content {
+      display:inline-block;
+    }
+
+    h4{
+      margin-top:0;
+      margin-bottom:0;
+      margin-left:10px;
+      padding:0;
+      font-weight: 500;
+      font-size: 15px;
+    }
+ 
+    span {
+      font-size: 13px;
+      margin-left:10px;
+      opacity: 50%;
+      font-weight: 500;
+      font-size: 13px;
+    }
+ 
+  
+
+    .titlename{
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+    }
+
+    .titledescr {
+      font-weight: 500;
+      font-size:13px;
+      opacity:70%;
+    }
+
+
+   @media screen and (max-width:1440px){
+    .container {
+      display: inline-block;
+           }
+
+    .quotation{
+      position: absolute;
+      top:0;
+      right:5%;
+    }
+    .grid-box{
+      margin:20px
+    }
+    h4 {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="grid-Daniel">
+      <div class="grid-box">
+        <img class="images" src="./images/image-daniel.jpg" alt="" width="35" height="35">
+        <img class="quotation" src="./images/bg-pattern-quotation.svg" alt="">
+          <div class="content"><h4>Daniel Clifford</h4>
+              <span>Verified Graduate</span>
+          </div>
+            <p class="titlename"> I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+              in the company I joined. I honestly feel I got every penny&#39;s worth.</p>
+            <p class="titledescr">“ I was an EMT for many years before I joined the bootcamp. I&#39;ve been looking to make a 
+              transition and have heard some people who had an amazing experience here. I signed up 
+              for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+              The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+              the course, I&#39;ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
+      </div>
+    </div>
+
+    
+    <div class="grid-Jonathan">
+     <div class="grid-box">
+        <img class="images" src="./images/image-jonathan.jpg" alt="" width="35" height="35">
+        <div class="content"><h4>Jonathan Walters</h4>
+            <span>Verified Graduate</span>
+         </div>
+          <p class="titlename">The team was very supportive and kept me motivated</p>
+          <p class="titledescr">“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+            for a big company. This was one of the best investments I&#39;ve made in myself. ”</p>
+      </div>
+    </div>
+
+
+    <div class="grid-Jeanette">
+      <div class="grid-box">
+        <img class="images" src="./images/image-jeanette.jpg" alt="" width="35" height="35">
+          <div class="content"><h4>Jeanette Harmon</h4>
+            <span>Verified Graduate</span>
+         </div>
+         <p class="titlename">An overall wonderful and rewarding experience</p>
+         <p class="titledescr">  “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+          while doing something I love. ”</p>
+      </div>
+    </div>
+
+    <div class="grid-Patrick">
+      <div class="grid-box">
+        <img class="images" src="./images/image-patrick.jpg" alt="" width="35" height="35">
+          <div class="content"><h4>Patrick Abrams</h4>
+            <span>Verified Graduate</span>
+          </div>
+          <p class="titlename">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+            learning from their experiences was easy.</p>
+          <p class="titledescr">  “ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+            gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+            junior developer. The standard is above the rest. You will get the personal attention you need from 
+            an incredible community of smart and amazing people. ”</p>
+      </div>
+    </div>
+
+
+    
+    <div class="grid-Kira">
+      <div class="grid-box">
+        <img class="images" src="./images/image-kira.jpg" alt="" width="35" height="35">
+          <div class="content"><h4>Kira Whittle</h4>
+            <span>Verified Graduate</span>
+         </div>
+         <p class="titlename">Such a life-changing experience. Highly recommended!</p>
+         <p class="titledescr">“ Before joining the bootcamp, I&#39;ve never written a line of code. I needed some structure from 
+          professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
+          student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
+          did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
+          project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
+          could ever have. In fact, I&#39;ve often referred to it during interviews as an example of my developent 
+          experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
+          100% recommend! ”</p>
+      </div>
+    </div>
+
+  </div>
+  
+  
+</body>
+</html>
